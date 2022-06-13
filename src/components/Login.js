@@ -13,13 +13,16 @@ const Login = () => {
   }, []);
 
   const handleLogin = async () => {
-    let result = await fetch("http://localhost:5000/login", {
-      method: "post",
-      body: JSON.stringify({ email, password }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      "https://e-comm-dashboard-backend.herokuapp.com/login",
+      {
+        method: "post",
+        body: JSON.stringify({ email, password }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     result = await result.json();
     if (result.auth) {
       localStorage.setItem("user", JSON.stringify(result.user));
@@ -31,8 +34,8 @@ const Login = () => {
   };
 
   return (
-    <div className="login">
-      <h1>Login</h1>
+    <div className="register">
+      <h1 className="page-heading">Login</h1>
       <input
         type="text"
         className="inputBox"

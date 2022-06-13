@@ -17,6 +17,7 @@
   position: absolute;
   bottom: 0;
   background-color: #33637b;
+  color: white;
   width: 100%;
   text-align: center;
 }
@@ -49,7 +50,11 @@
 
 .register,
 .product {
-  margin-left: 30%;
+  margin-left: 40%;
+}
+
+.page-heading {
+  margin-left: 9%;
 }
 .login {
   margin-left: 30%;
@@ -66,7 +71,7 @@
 
 .appButton {
   margin: 20px;
-  width: 150px;
+  width: 27.5%;
   padding: 10px;
   background-color: #33637b;
   border: 0px;
@@ -86,7 +91,16 @@
   border-radius: 50%;
   float: left;
   margin-top: 3px;
-  margin-left: 10px;
+  margin-left: 1%;
+  background: transparent;
+}
+
+.firstRoute {
+  margin-left: 1%;
+}
+
+.logoutRoute {
+  margin-left: 76%;
 }
 
 .invalid-input {

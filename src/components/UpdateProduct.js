@@ -14,11 +14,14 @@ const UpdateProduct = () => {
   }, []);
 
   const getProductDetails = async () => {
-    let result = await fetch(`http://localhost:5000/products/${params.id}`, {
-      headers: {
-        authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
-      },
-    });
+    let result = await fetch(
+      `https://e-comm-dashboard-backend.herokuapp.com/products/${params.id}`,
+      {
+        headers: {
+          authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
+        },
+      }
+    );
     result = await result.json();
     setName(result.name);
     setPrice(result.price);
@@ -27,14 +30,17 @@ const UpdateProduct = () => {
   };
 
   const updateProduct = async () => {
-    let result = await fetch(`http://localhost:5000/products/${params.id}`, {
-      method: "put",
-      body: JSON.stringify({ name, price, category, company }),
-      headers: {
-        "Content-Type": "Application/json",
-        authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
-      },
-    });
+    let result = await fetch(
+      `https://e-comm-dashboard-backend.herokuapp.com/products/${params.id}`,
+      {
+        method: "put",
+        body: JSON.stringify({ name, price, category, company }),
+        headers: {
+          "Content-Type": "Application/json",
+          authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
+        },
+      }
+    );
     result = await result.json();
     if (result) {
       navigate("/");

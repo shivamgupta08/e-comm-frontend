@@ -14,23 +14,26 @@ const Nav = () => {
       <img
         className="logo"
         alt="logo"
-        src="https://e7.pngegg.com/pngimages/15/271/png-clipart-computer-icons-online-shopping-shopping-cart-service-shopping-cart-icon-text-service-thumbnail.png"
+        src="https://cdn1.iconfinder.com/data/icons/online-shopping-4-1/64/shop_shopping_cart_add_go-512.png"
       ></img>
       {auth ? (
         <ul className="nav-ul">
-          <li>
-            <Link to="/"> Products </Link>
+          <li className="firstRoute">
+            <Link activeStyle={{ backgroundColor: "red" }} to="/">
+              {" "}
+              Products{" "}
+            </Link>
           </li>
           <li>
-            <Link to="/add"> Add Product </Link>
+            <Link activeStyle={{ backgroundColor: "red" }} to="/add">
+              {" "}
+              Add Product{" "}
+            </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/update"> Update Product </Link>
-          </li>
-          <li>
-            <Link to="/profile"> Profile </Link>
-          </li>
-          <li>
+          </li> */}
+          <li className="logoutRoute">
             <Link to="/signup" onClick={logout}>
               Logout
             </Link>
