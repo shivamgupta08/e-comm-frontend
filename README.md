@@ -1,6 +1,6 @@
 # e-comm-frontend
 Welcome to E-commerce Dashboard Frontend Repo.
-Its live: https://e-comm-frontend.herokuapp.com/signup
+Its live: https://e-comm-dashboard.herokuapp.com/signup
 
 ## Features:
 1. Signup + Login
